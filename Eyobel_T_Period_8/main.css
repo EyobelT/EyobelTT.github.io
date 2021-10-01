@@ -1,0 +1,109 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+background-image:linear-gradient(to right, red,purple);
+background-size: 300%;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ animation: bg-animation 20s infinite;
+}
+
+@keyframes bg-animation{
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    0% {
+        background-position: left;
+    }
+}
+
+.calculator{
+ flex: 0 0 95%;
+}
+.screen{
+ width: 100%;
+ font-size: 7rem;
+ padding: 0.5rem;
+ background: rgb(41,41,56);
+ color: white;
+ border:none;
+ border: 10px solid black;
+}
+
+.buttons{
+ display: flex;
+ flex-wrap: wrap;
+ transition: all 0.5s linear;
+}
+
+.btn-yellow{
+    background-image:repeating-linear-gradient(to left, orange,black);
+    background-size: 500%;
+    background-position: right;
+    color: white;
+    flex:0 0 25%;
+    border: 1px solid black;
+    padding: 0.25rem 0;
+    transition: all 2s ease;
+}
+.btn-yellow:hover{
+    color: yellow;
+    background-position: left;
+}
+
+.btn-grey{
+    background-image:linear-gradient(to right, rgb(2, 206, 2),yellow);
+    background-size: 300%;
+    background-position: right;
+    color: white;
+    flex:0 0 25%;
+    border: 1px solid black;
+    padding: 0.25rem 0;
+    transition: all 2s ease;
+}
+.btn-grey:hover{
+color: black;
+background-position: left;
+}
+
+.btn,.btn-equal,.btn-clear{
+ font-size: 4rem;
+}
+.btn-equal{
+    background-image: linear-gradient(to right, green,red);
+    background-size: 300%;
+    background-position: left;
+    flex:0 0 25%;
+    color: white;
+    border: 1px solid black;
+    padding: 0.25rem 0;
+    transition: all 2s ease;
+
+}
+.btn-equal:hover{
+    color: black;
+    background-position: right;
+}
+.btn-clear{
+    background-image: linear-gradient(to right, blue,orange);
+    background-size: 300%;
+    background-position: left;
+    flex:0 0 25%;
+    color: white;
+    border: 1px solid black;
+    padding: 0.25rem 0;
+    transition: all 2s ease;
+}
+.btn-clear:hover{
+    color: black;
+    background-position: right;
+}
